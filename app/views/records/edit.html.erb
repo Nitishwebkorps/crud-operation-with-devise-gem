@@ -1,0 +1,83 @@
+<h1 style="text-align:center;color:white;background-color:red">Edit Your Details</h1>
+
+<% if @record.errors.any? %>
+  <h2>Following errors prevented the record from being saved </h2>
+  <ul>
+    <% @record.errors.full_messages.each do |msg| %>
+      <li><% msg %></li>
+    <% end %>
+  </ul>
+<%end%>
+
+
+<%= form_with scope: :record, url: records_path, local: true do |f| %>
+  <p>
+    <%= f.label :name%></br>
+    <%= f.text_field :name%>
+  </p>
+
+  <p>
+    <%= f.label :fathername%></br>
+    <%= f.text_field :fathername%>
+  </p>
+
+  <p>
+    <%= f.label :mothername%></br>
+    <%= f.text_field :mothername%>
+  </p>
+
+  <p>
+    <%= f.label :email%></br>
+    <%= f.text_field :email%>
+  </p>
+
+  <p>
+    <%= f.label :address%></br>
+    <%= f.text_field :address%>
+  </p>
+
+  <p>
+    <%= f.label :city%></br>
+    <%= f.text_field :name%>
+  </p>
+
+  <p>
+    <%= f.label :state%></br>
+    <%= f.text_field :state%>
+  </p>
+
+  <p>
+    <%= f.label :phoneno%></br>
+    <%= f.text_field :phoneno%>
+  </p>
+
+  <p>
+    <%= f.label :tenth%></br>
+    <%= f.text_field :tenth%>
+  </p>
+
+  <p>
+    <%= f.label :twelve%></br>
+    <%= f.text_field :twelve%>
+  </p>
+
+  <p>
+    <%= f.label :firstsem%></br>
+    <%= f.text_field :firstsem%>
+  </p>
+
+  <p>
+    <%= f.label :secondsem%></br>
+    <%= f.text_field :secondsem%>
+  </p>
+
+  <p>
+    <%= f.submit%>
+    
+  </p>
+
+  
+
+<%end%>
+ 
+  

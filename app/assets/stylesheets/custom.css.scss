@@ -1,0 +1,21 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+.nav{    
+    background-color: blue;
+}
+
+.raju {    
+    background: blue;
+}
+
+body {    
+    display: flex;    
+    min-height: 100vh;    
+    flex-direction: column;    
+    background-color: linen;  
+}  
+
+main {    
+    flex: 1 0 auto;  
+}

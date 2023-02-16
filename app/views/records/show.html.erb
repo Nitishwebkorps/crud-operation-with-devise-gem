@@ -1,0 +1,30 @@
+<div class="text-bg-info p-3">
+<h3>Roll Number :- </h3><%= @record.id %>
+
+<h3>Name :-</h3><%= @record.name %>
+<h3>Father Name :-</h3><%= @record.fathername %>
+<h3>Mother Name :-</h3><%= @record.mothername %>
+<h3>Email Address :-</h3><%= @record.email %>
+<h3>Residential Address :-</h3><%= @record.address %>
+<h3>City :-</h3><%= @record.city %>
+<h3>State :-</h3><%= @record.state %>
+<h3>Contact number :-</h3><%= @record.phoneno %>
+<h3>Tenth percentage :-</h3><%= @record.tenth %>
+<h3>Twelveth Percentage :-</h3><%= @record.twelve %>
+<h3>Firstsem Persentage :-</h3><%= @record.firstsem %>
+<h3>Secondsem Percentage :-</h3><%= @record.secondsem %>
+
+
+<h2> Tenth result :- </h2><%= if @record.tenth<35 then "Pass" else "Fail" end %>
+<h2> Twelve result :- </h2><%= if @record.twelve<35 then "Pass" else "Fail" end %>
+<h2> First Semester result :- </h2><%= if @record.firstsem<35 then "Pass" else "Fail" end %>
+<h2> Second Semester result :- </h2><%= if @record.secondsem<35 then "Pass" else "Fail" end %>
+
+
+
+
+</div>
+
+<%= link_to "Edit Information",  edit_record_path(@record), class: "btn btn-warning" %>
+
+<%= link_to "Delete Information", record_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } ,class: "btn btn-danger "%>

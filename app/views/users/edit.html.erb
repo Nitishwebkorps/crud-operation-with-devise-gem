@@ -1,0 +1,9 @@
+<h1 style="text-align:center;color:white;background-color:red;mt-3">Edit Role Of Registered user</h1>
+
+<%= form_with(model: @user) do |form| %>
+
+    <%= form.collection_check_boxes :role_ids, Role.all, :id, :name %>
+    <%= @user.errors[:roles] %>
+    <%= form.button :submit %>
+
+<% end %>
